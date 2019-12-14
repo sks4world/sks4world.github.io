@@ -18,6 +18,23 @@
 
 			google.maps.event.addDomListener(window, 'load', initialize);
 			function gm_authFailure() { alert('error') };
+
+			var $form = $('form#test-form'),
+				url = 'https://script.google.com/macros/s/AKfycbzaJHzVfFK40V8hhtV4mhWE8LuuZobtG479ExCPoo3VPRaWR0jK/exec'
+
+			$('#submit-form').on('click', function(e) {
+ 			 	e.preventDefault();
+  				var jqxhr = $.ajax({
+    			url: url,
+    			method: "POST",
+    			dataType: "json",
+    			data: $form.serializeObject()
+  				}).success(
+    		// do something
+  			);
+			})
+
+
 		</script>
 		<header>
 			<div class='header1'>
@@ -37,54 +54,36 @@
 			<div class='content1'>
 				<div class='left'></div>
 				<div class='middle'>
-					<div class='content2'>
-						<h3>Create Your Own Groop<a href='joingroop1.html'>.</a></h3>
-						<h4>Estimate Your Savings<a href='joingroop1.html'>.</a></h4>
-					</div>
-					<div class='content2'>
-						<h3>Fruits<a href='joingroop.html'>.</a></h3>
-						<h4>Estimate Your Savings<a href='joingroop.html'>.</a></h4>
-					</div> 
-					<div class='content2'>
-						<h3>Vegetables<a href='joingroop.html'>.</a></h3>
-						<h4>Estimate Your Savings<a href='joingroop.html'>.</a></h4>
-					</div>
-					<div class='content2'>
-						<h3>Cooking Oil<a href='joingroop.html'>.</a></h3>
-						<h4>Estimate Your Savings<a href='joingroop.html'>.</a></h4>
-					</div>
-					<div class='content2'>
-						<h3>Snacks<a href='joingroop.html'>.</a></h3>
-						<h4>Estimate Your Savings<a href='joingroop.html'>.</a></h4>
-					</div>
-					<div class='content2'>
-						<h3>Dates, Nuts and Honey<a href='joingroop.html'>.</a></h3>
-						<h4>Estimate Your Savings<a href='joingroop.html'>.</a></h4>
-					</div>
-					<div class='content2'>
-						<h3>Drinks<a href='joingroop.html'>.</a></h3>
-						<h4>Estimate Your Savings<a href='joingroop.html'>.</a></h4>
-					</div> 
-					<div class='content2'>
-						<h3>Vitamin Supplies<a href='joingroop.html'>.</a></h3>
-						<h4>Estimate Your Savings<a href='joingroop.html'>.</a></h4>
-					</div>
-					<div class='content2'>
-						<h3>Beauty and Skin<a href='joingroop.html'>.</a></h3>
-						<h4>Estimate Your Savings<a href='joingroop.html'>.</a></h4>
-					</div>
-					<div class='content2'>
-						<h3>Bath Supplies<a href='joingroop.html'>.</a></h3>
-						<h4>Estimate Your Savings<a href='joingroop.html'>.</a></h4>
-					</div>
-					<div class='content2'>
-						<h3>Cleaning Supplies<a href='joingroop.html'>.</a></h3>
-						<h4>Estimate Your Savings<a href='joingroop.html'>.</a></h4>
-					</div>
-					<div class='content2'>
-						<h3>School Supplies<a href='joingroop.html'>.</a></h3>
-						<h4>Estimate Your Savings<a href='joingroop.html'>.</a></h4>
-					</div>
+					<center><form action='https://docs.google.com/forms/u/0/d/e/1FAIpQLSenI6kFExZjG1QfPggDM3Sm82TbJ66XdC6zFwSwFCjLbEs2AQ/formResponse' target='_self' method='POST' class='form-1'>
+						Full name:<br>
+						<input type='text' name='entry.1890264672'><br>
+						Email:<br>
+						<input type='text' name='entry.1456017055'><br>
+						Mobile:<br>
+						<input type='text' name='entry.120518512'><br>	
+						Fruits and Vegetables Weekly Delivery:<br>
+						<input type='checkbox' name='entry.1016952184' value= 'Fruit - Apple 2lb' > Fruit-Apple 2lb<br>
+						<input type='checkbox' name='entry.1016952184' value='Fruit - Grapes 1lb'> Fruit-Grapes 1lb<br>
+						<input type='checkbox' name='entry.1016952184' value='Fruit - Big Oranges 2lb'> Fruit-Big Oranges 2lb<br>
+						<input type='checkbox' name='entry.1016952184' value='Fruit-Strawberries 1lb'> Fruit-Strawberries 1lb<br>
+						<input type='checkbox' name='entry.1016952184' value='Vegetable - Onion 2lb'> Vegetable-Onion 2lb<br>
+						<input type='checkbox' name='entry.1016952184' value='Vegetable - Potato 2lb'> Vegetable-Potato 2lb<br>
+						<input type='checkbox' name='entry.1016952184' value='Vegetable - Carrot 2lb'> Vegetable-Carrot 2lb<br>
+						<input type='checkbox' name='entry.1016952184' value='Vegetable - Tomato 1lb'> Vegetable-Tomato 2lb<br>
+						Weekly Number of Deliveries:<br>
+						<input type='radio' name='entry.1694179170' value='26 Weeks'> 26 Weeks<br>
+						<input type='radio' name='entry.1694179170' value='52 Weeks'> 52 Weeks<br>
+						<input type='radio' name='entry.1694179170' value='Trial 12 Weeks'> Trial 12 Weeks<br>
+						I need Subscription of other items as well:<br>
+						<input type='text' name='entry.1649528068'><br>
+						Delivery Address With Zipcode:<br>
+						<input type='text' name='entry.2132620385'><br>
+						Delivery Time:<br>
+						<input type='radio' name='entry.2055402363' value='Sunday 11am to 3pm'> Sunday 11am to 3pm<br>
+						<input type='radio' name='entry.2055402363' value='Sunday 3pm to 7pm'> Sunday 3pm to 7pm<br>
+						<input type='radio' name='entry.2055402363' value='Other'> Other<br><br>
+						<input type='submit' value='Submit' class='submit-1'>
+					</form></center>
 				</div>
 				<div class='right'></div>
 		</div>
@@ -350,6 +349,16 @@
 		background-color: teal;
 	}
 
+	.form-1{
+		text-align: left;
+		font-size:1em;
+	}
+
+	.submit-1{
+		background-color:#050979;
+		color:white; 
+		font-size:1em;
+	}
 
 	footer{
 		background-color: lightblue;
