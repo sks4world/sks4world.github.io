@@ -20,7 +20,7 @@
 			function gm_authFailure() { alert('error') };
 
 			var $form = $('form#test-form'),
-				url = 'https://script.google.com/macros/s/AKfycbzaJHzVfFK40V8hhtV4mhWE8LuuZobtG479ExCPoo3VPRaWR0jK/exec'
+				url = 'https://script.google.com/macros/s/AKfycbw5cCkX3IpmavWypbQ4R6Q6G1CaQlqsOJlHk3BpONIprd0JkGxT/exec'
 
 			$('#submit-form').on('click', function(e) {
  			 	e.preventDefault();
@@ -57,32 +57,32 @@
 					<!--<center><form action='https://docs.google.com/forms/u/0/d/e/1FAIpQLSenI6kFExZjG1QfPggDM3Sm82TbJ66XdC6zFwSwFCjLbEs2AQ/formResponse' target='_self' method='POST' class='form-1'>-->
 					<center><form id="test-form" class='form-1'>
 						Full name:<br>
-						<input type='text' name='Full Name'><br>
+						<input type='text' name='Full_Name'><br>
 						Email:<br>
 						<input type='text' name='Email'><br>
 						Mobile:<br>
 						<input type='text' name='Mobile'><br>	
 						Fruits and Vegetables Weekly Delivery:<br>
-						<input type='checkbox' name='Fruits and Vegetables Weekly Delivery' value= 'Fruit - Apple 2lb' > Fruit-Apple 2lb<br>
-						<input type='checkbox' name='Fruits and Vegetables Weekly Delivery' value='Fruit - Grapes 1lb'> Fruit-Grapes 1lb<br>
+						<input type='text' name='Fruit_Apple_2lb'><br>
+						<!--<input type='checkbox' name='Fruits and Vegetables Weekly Delivery' value='Fruit - Grapes 1lb'> Fruit-Grapes 1lb<br>
 						<input type='checkbox' name='Fruits and Vegetables Weekly Delivery' value='Fruit - Big Oranges 2lb'> Fruit-Big Oranges 2lb<br>
 						<input type='checkbox' name='Fruits and Vegetables Weekly Delivery' value='Fruit-Strawberries 1lb'> Fruit-Strawberries 1lb<br>
 						<input type='checkbox' name='Fruits and Vegetables Weekly Delivery' value='Vegetable - Onion 2lb'> Vegetable-Onion 2lb<br>
 						<input type='checkbox' name='Fruits and Vegetables Weekly Delivery' value='Vegetable - Potato 2lb'> Vegetable-Potato 2lb<br>
 						<input type='checkbox' name='Fruits and Vegetables Weekly Delivery' value='Vegetable - Carrot 2lb'> Vegetable-Carrot 2lb<br>
-						<input type='checkbox' name='Fruits and Vegetables Weekly Delivery' value='Vegetable - Tomato 1lb'> Vegetable-Tomato 2lb<br>
+						<input type='checkbox' name='Fruits and Vegetables Weekly Delivery' value='Vegetable - Tomato 1lb'> Vegetable-Tomato 2lb<br>-->
 						Weekly Number of Deliveries:<br>
-						<input type='radio' name='Weekly Delivery For Number of Weeks' value='26 Weeks'> 26 Weeks<br>
-						<input type='radio' name='Weekly Delivery For Number of Weeks' value='52 Weeks'> 52 Weeks<br>
-						<input type='radio' name='Weekly Delivery For Number of Weeks' value='Trial 12 Weeks'> Trial 12 Weeks<br>
+						<input type='text' name='Weekly_Delivery'><br>
+						<!--<input type='radio' name='Weekly Delivery For Number of Weeks' value='52 Weeks'> 52 Weeks<br>
+						<input type='radio' name='Weekly Delivery For Number of Weeks' value='Trial 12 Weeks'> Trial 12 Weeks<br>-->
 						I need Subscription of other items as well:<br>
-						<input type='text' name='I need Subscription of other items as well'><br>
+						<input type='text' name='Other_Items'><br>
 						Delivery Address With Zipcode:<br>
-						<input type='text' name='Delivery Address with Zipcode'><br>
+						<input type='text' name='Delivery_Address'><br>
 						Delivery Time:<br>
-						<input type='radio' name='Delivery Time' value='Sunday 11am to 3pm'> Sunday 11am to 3pm<br>
-						<input type='radio' name='Delivery Time' value='Sunday 3pm to 7pm'> Sunday 3pm to 7pm<br>
-						<input type='radio' name='Delivery Time' value='Other'> Other<br><br>
+						<input type='text' name='Sunday_3pm'><br>
+						<!--<input type='radio' name='Delivery Time' value='Sunday 3pm to 7pm'> Sunday 3pm to 7pm<br>
+						<input type='radio' name='Delivery Time' value='Other'> Other<br><br>-->
 						<button type='submit' value='Submit' class='submit-1' id='submit-form'>Submit</button>
 					</form></center>
 				</div>
